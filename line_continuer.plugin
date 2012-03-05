@@ -1,0 +1,8 @@
+{
+  "module": "line_continuer",
+  "class": "LineContinuer",
+  "authors": "Erik Tollerud <erik.tollerud@gmail.com>",
+  "version": "0.1",
+  "url": "",
+  "description": "A NINJA-IDE plugin to add newlines after a fixed number of characters for blocks of text."
+}

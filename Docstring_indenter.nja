@@ -1,6 +1,0 @@
-{
-  "venv": "", 
-  "name": "Docstring indenter", 
-  "license": "GNU General Public License v3", 
-  "description": "A NINJA-IDE plugin to indent docstrings to a fixed number of characters."
-}

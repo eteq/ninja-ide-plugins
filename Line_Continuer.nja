@@ -1,0 +1,23 @@
+{
+  "mainFile": "", 
+  "venv": "", 
+  "name": "Line Continuer", 
+  "license": "GNU General Public License v3", 
+  "url": "", 
+  "pythonPath": "python", 
+  "preExecScript": "", 
+  "programParams": "", 
+  "supported-extensions": [
+    ".py", 
+    ".html", 
+    ".jpg", 
+    ".png", 
+    ".ui", 
+    ".css", 
+    ".json", 
+    ".ini"
+  ], 
+  "project-type": "", 
+  "postExecScript": "", 
+  "description": "A NINJA-IDE plugin to add newlines after a fixed number of characters for blocks of text."
+}

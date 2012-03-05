@@ -1,8 +1,0 @@
-{
-  "module": "docstring_indenter",
-  "class": "DocstringIndenter",
-  "authors": "Erik Tollerud <erik.tollerud@gmail.com>",
-  "version": "0.1",
-  "url": "",
-  "description": "A NINJA-IDE plugin to indent docstrings to a fixed number of characters."
-}
