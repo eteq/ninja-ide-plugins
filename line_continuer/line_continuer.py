@@ -5,6 +5,9 @@ from ninja_ide.core.plugin import Plugin
 from PyQt4.QtCore import SIGNAL
 from PyQt4.QtGui import QTextCursor
 from PyQt4.QtGui import QAction
+from PyQt4.QtGui import QFrame
+from PyQt4.QtGui import QLineEdit
+from PyQt4.QtGui import QLabel
 
 _statrtindentrex = re.compile('(\s*)\S')
 _whitespacerex = re.compile('\s*')
@@ -67,3 +70,24 @@ class LineContinuer(Plugin):
             if strlist[-1] != s:
                 del strlist[-1]
             cur.insertText(''.join(strlist))
+
+    def get_preferences_widget(self):
+        return LineContinuerPrefs(self)
+
+
+class LineContinuerPrefs(QFrame):
+
+    def __init__(self, linecontinuer):
+        super(LineContinuerPrefs, self).__init__()
+        self.lc = linecontinuer
+
+        QLabel('Maximum Line Length:', parent=self)
+        self.prefedit = QLineEdit(str(self.lc.ncols), parent=self)
+
+    def save(self):
+        txt = self.prefedit.text()
+        try:
+            self.lc.ncols = int(txt)
+        except ValueError:
+            self.prefedit.setText(str(self.lc.ncols))
+            print 'Invalid text in ncols - need to report this better'
