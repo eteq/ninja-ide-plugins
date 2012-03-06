@@ -17,7 +17,7 @@ class LineContinuer(Plugin):
 
     def initialize(self):
         self.menuapp_s = self.locator.get_service('menuApp')
-        self.action = QAction("Indent selection", self)
+        self.action = QAction("Reformat Selection", self)
         self.connect(self.action, SIGNAL("triggered()"), self.replace_text)
         self.menuapp_s.add_action(self.action)
 
