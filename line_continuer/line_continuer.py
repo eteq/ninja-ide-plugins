@@ -58,6 +58,7 @@ class LineContinuer(Plugin):
                 if lcnt + ls > self.ncols:
                     strlist.append('\n' + indentstr)
                     strlist.append(s)
+                    strlist.append(' ')
                     lcnt = lind + ls
                 elif lcnt + ls == self.ncols:
                     strlist.append(s)
